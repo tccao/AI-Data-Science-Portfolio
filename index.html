@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Project Portfolio</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation bar styles */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hero section styles */
+    #hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #hero .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Other section styles */
+    section {
+      padding: 50px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Statistics</a></li>
+      <li><a href="#">Linear Algebra</a></li>
+      <li><a href="#">Machine Learning</a></li>
+      <li><a href="#">Deep Learning</a></li>
+    </ul>
+    <input type="text" placeholder="Search...">
+  </nav>
+
+  <!-- Hero section -->
+  <section id="hero">
+    <video autoplay loop muted>
+      <source src="placeholder-video.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h1 id="tagline">Learn at your own pace</h1>
+      <button>Get Started</button>
+    </div>
+  </section>
+
+  <!-- Featured courses section -->
+  <section id="featured-courses">
+    <h2>Featured Courses</h2>
+    <div class="course-card">
+      <img src="placeholder-image.jpg" alt="Course Image">
+      <h3>Course Title</h3>
+      <p>Author Name</p>
+      <p>Course description goes here...</p>
+    </div>
+    <!-- Add more course cards as needed -->
+  </section>
+
+  <!-- Learning Paths section -->
+  <section id="learning-paths">
+    <h2>Learning Paths</h2>
+    <p>Take a short quiz to determine your data science interests.</p>
+    <button id="start-quiz">Start Quiz</button>
+  </section>
+
+  <!-- Success Stories section -->
+  <section id="success-stories">
+    <h2>Success Stories</h2>
+    <div class="testimonial">
+      <p>Testimonial text goes here...</p>
+      <p>- Client Name</p>
+    </div>
+    <!-- Add more testimonials as needed -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <ul>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><button id="contact-us">Contact Us</button></li>
+    </ul>
+  </footer>
+
+  <script>
+    // JavaScript code goes here
+    const tagline = document.getElementById('tagline');
+    const taglines = ['Learn at your own pace', 'Discover new passions', 'Expand your horizons'];
+    let currentIndex = 0;
+
+    function rotateTagline() {
+      currentIndex = (currentIndex + 1) % taglines.length;
+      tagline.textContent = taglines[currentIndex];
+    }
+
+    setInterval(rotateTagline, 3000);
+  </script>
+</body>
+</html>
